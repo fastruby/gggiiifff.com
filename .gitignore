@@ -1,0 +1,9 @@
+.ruby-version
+
+.env
+
+tmp
+
+coverage/*
+
+spec/examples.txt

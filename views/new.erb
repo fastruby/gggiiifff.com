@@ -1,0 +1,12 @@
+<section id="page-wrapper">
+  <h1>Upload Gif:</h1>
+
+  <% form(file) do |f| %>
+    <% f.inputs(legend: 'File') do %>
+      <%= f.input(:file) %>
+    <% end %>
+    <br/>
+    <%= f.button(value: 'Upload') %>
+  <% end %>
+
+</section>

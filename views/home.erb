@@ -1,0 +1,29 @@
+<section id="page-wrapper">
+  <h1>Search all the gggiiifffs<% if query.present? %> for <%= query.q %><% end %>!</h1>
+
+  <% form(query) do |f| %>
+    <% f.inputs(legend: 'Search') do %>
+      <%= f.input(:q) %>
+    <% end %>
+    <br/>
+    <%= f.button(value: 'Search') %>
+  <% end %>
+
+  <% if query.present? %>
+    <% if query.results? %>
+      <ul>
+      <% query.results["data"].each do |result| %>
+        <li>
+          <img src="<%= result["images"]["fixed_width"]["url"] %>" title="<%= query.q %> gif" />
+        </li>
+      <% end %>
+      </ul>
+    <% else %>
+      We didn't find any results! ¯\_(ツ)_/¯
+    <% end %>
+  <% end %>
+
+  <div class="upload">
+    <a href="/gifs/new" title="Upload new gif">Upload Gif</a>
+  </div>
+</section>
