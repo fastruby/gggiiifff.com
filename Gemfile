@@ -11,7 +11,7 @@ gem "tilt"
 
 group :development do
   gem "byebug"
-  gem "rubycritic"
+  gem "rubycritic", path: "../rubycritic"
   gem "shotgun"
   gem "simplecov"
 end
