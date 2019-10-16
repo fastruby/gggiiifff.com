@@ -1,12 +1,3 @@
-if ENV["COVERAGE"] == "true"
-  require 'simplecov'
-  SimpleCov.start do
-    add_group "Models", "models"
-    add_filter "/spec/"
-    track_files "**/*.rb"
-  end
-end
-
 require_relative "../app"
 
 RSpec.configure do |config|
