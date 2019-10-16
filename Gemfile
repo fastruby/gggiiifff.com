@@ -13,7 +13,6 @@ group :development do
   gem "byebug"
   gem "rubycritic", git: "git@github.com:fastruby/rubycritic.git", branch: "simple-cov-section"
   gem "shotgun"
-  gem "simplecov"
 end
 
 group :test do

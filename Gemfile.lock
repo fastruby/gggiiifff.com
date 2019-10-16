@@ -161,7 +161,6 @@ DEPENDENCIES
   shotgun
   shrine
   shrine-redis
-  simplecov
   tilt
 
 BUNDLED WITH
