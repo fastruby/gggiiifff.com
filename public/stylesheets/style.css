@@ -47,19 +47,20 @@ body {
   font-family: "Source Code Pro", monospace;
   -webkit-font-smoothing: antialiased;
   color: #222222;
-  padding-top: 4rem; }
+  padding-top: 1rem; }
   body .modal-active {
     overflow: hidden; }
 
 #page-wrapper {
   margin-left: 0px;
-  padding-top: 40px;
   position: relative;
   z-index: 10;
   min-height: 100%; }
   @media (min-width: 768px) {
     #page-wrapper {
-      margin-left: 250px; } }
+      margin-left: auto;
+      margin-right: auto;
+      } }
 
 #sections {
   width: 80%;
@@ -239,7 +240,7 @@ h1 {
     h1 {
       font-size: 3.25rem;
       line-height: 1.25;
-      margin-bottom: 4rem; } }
+      margin-bottom: 1rem; } }
 
 h2 {
   font-family: "Source Code Pro", monospace;
