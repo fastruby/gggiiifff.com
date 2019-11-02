@@ -4,14 +4,13 @@
   <% form(query) do |f| %>
     <% f.inputs(legend: 'Search') do %>
       <%= f.input(:q) %>
+      <%= f.button(value: 'Search') %>
     <% end %>
-    <br/>
-    <%= f.button(value: 'Search') %>
   <% end %>
 
   <% if query.present? %>
     <% if query.results? %>
-      <ul>
+      <ul class="results">
       <% query.results["data"].each do |result| %>
         <li>
           <img src="<%= result["images"]["fixed_width"]["url"] %>" title="<%= query.q %> gif" />
@@ -23,7 +22,7 @@
     <% end %>
   <% end %>
 
-  <div class="upload">
+  <!-- div class="upload">
     <a href="/gifs/new" title="Upload new gif">Upload Gif</a>
-  </div>
+  </div-->
 </section>

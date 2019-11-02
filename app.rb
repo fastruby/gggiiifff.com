@@ -20,15 +20,16 @@ module Gggiiifff
 
       # /search branch
       r.get "search" do
-        @query = Query.new(q: request.params["q"])
+        query_string = request.params["q"].to_s.strip
+        @query = Query.new(q: query_string)
         @query.search!
-        render "home", locals: { query: @query }
+        view "home", locals: { query: @query }
       end
 
       # /gifs/new
       r.get "gifs/new" do
         @file = Gggiiifff::File.new
-        render "new", locals: { file: @file }
+        view "new", locals: { file: @file }
       end
     end
   end
