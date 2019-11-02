@@ -11,6 +11,7 @@ module Gggiiifff
   class App < Roda
     plugin :forme
     plugin :render
+    plugin :static, ['/stylesheets']
 
     route do |r|
       # GET / request
