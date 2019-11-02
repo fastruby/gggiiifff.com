@@ -3,6 +3,7 @@ if ENV["COVERAGE"] == "true"
   SimpleCov.start do
     add_group "Models", "models"
     add_filter "/spec/"
+    add_filter "/config/"
     track_files "**/*.rb"
   end
 end
