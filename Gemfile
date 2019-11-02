@@ -11,7 +11,7 @@ gem "tilt"
 
 group :development do
   gem "byebug"
-  gem "rubycritic", git: "git@github.com:fastruby/rubycritic.git", branch: "simple-cov-section"
+  gem "rubycritic"
   gem "shotgun"
   gem "simplecov"
 end
