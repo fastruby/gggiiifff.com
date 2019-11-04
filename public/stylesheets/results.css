@@ -6,3 +6,7 @@ ul.results li {
     float:left;
     padding-left: 1em;
 }
+
+form input {
+  font-size: 1em;
+}
