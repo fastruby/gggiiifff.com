@@ -2,7 +2,7 @@
   <h1>Search all the gggiiifffs<% if query.present? %> for <%= query.q %><% end %>!</h1>
 
   <% form(query) do |f| %>
-    <% f.inputs(legend: 'Search') do %>
+    <% f.inputs do %>
       <%= f.input(:q) %>
       <%= f.button(value: 'Search') %>
     <% end %>

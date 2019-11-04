@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="stylesheets/results.css">
   </head>
   <body class="">
+    <div class="flash-bar">
+      <%= flash["notice"] %>
+    </div>
+    <div class="user-bar">
+      <!-- a href="/auth/twitter">Sign in with Twitter</a-->
+    </div>
     <div class="content"><%= yield %></div>
   </body>
 </html>
