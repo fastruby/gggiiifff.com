@@ -4,10 +4,13 @@ gem "roda"
 
 gem "dotenv"
 gem "forme"
+gem "ohm"
+gem "omniauth-twitter"
 gem "rest-client"
 gem "shrine"
 gem "shrine-redis"
 gem "tilt"
+gem "warden"
 
 group :development do
   gem "byebug"
