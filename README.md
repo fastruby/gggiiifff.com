@@ -2,6 +2,11 @@
 
 A directory of gifs powered by roda and giphy.
 
+## Requirements
+
+- Ruby
+- Redis
+
 ## Setup
 
     ./bin/setup
