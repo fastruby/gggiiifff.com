@@ -7,24 +7,19 @@ module Gggiiifff
     attr_reader :results
 
     def initialize(attrs = {})
-      self.q = attrs[:q].to_s
+      self.q = attrs[:q].to_s.strip
       @results = []
-    end
-
-    def present?
-      self.q.strip.size > 0
-    end
-
-    def results?
-      !@results.empty?
     end
 
     def search!
       return unless self.present?
 
-      url = "http://api.giphy.com/v1/gifs/search?q=#{q}&api_key=#{GIPHY_API_KEY}&limit=5"
       response = RestClient.get(url)
       @results = JSON.parse(response)
+    end
+
+    def url
+      "http://api.giphy.com/v1/gifs/search?q=#{q}&api_key=#{GIPHY_API_KEY}&limit=5"
     end
   end
 end
