@@ -13,13 +13,14 @@ group :development do
   gem "byebug"
   gem "rubycritic"
   gem "shotgun"
-  gem "simplecov"
+  gem "skunk", "0.3.0"
 end
 
 group :test do
   gem "rspec"
   gem "rack-test"
   gem "capybara"
+  gem "simplecov"
 end
 
 group :production do
