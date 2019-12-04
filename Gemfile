@@ -13,7 +13,7 @@ group :development do
   gem "byebug"
   gem "rubycritic"
   gem "shotgun"
-  gem "skunk", "0.3.0"
+  gem "skunk", "0.3.2"
 end
 
 group :test do
