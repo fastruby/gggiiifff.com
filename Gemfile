@@ -8,6 +8,7 @@ gem "rest-client"
 gem "shrine"
 gem "shrine-redis"
 gem "tilt"
+gem "memory_profiler"
 
 group :development do
   gem "byebug"
