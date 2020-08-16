@@ -8,9 +8,11 @@ gem "rest-client"
 gem "shrine"
 gem "shrine-redis"
 gem "tilt"
-gem "memory_profiler"
 
 group :development do
+  gem "memory_profiler"
+  gem "rack-mini-profiler"
+  gem "bundler-leak"
   gem "byebug"
   gem "rubycritic"
   gem "shotgun"
