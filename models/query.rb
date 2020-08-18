@@ -6,7 +6,7 @@ module Gggiiifff
     attr_accessor :q
     attr_reader :results
 
-    @@cache = Hash.new 
+    QUERY_CACHE = Hash.new 
 
     def initialize(attrs = {})
       self.q = attrs[:q].to_s
@@ -28,12 +28,12 @@ module Gggiiifff
     end
 
     def search_with_cache!
-      return @@cache[q] if @@cache[q]
+      return QUERY_CACHE[q] if QUERY_CACHE[q]
 
       url = "http://api.giphy.com/v1/gifs/search?q=#{q}&api_key=#{GIPHY_API_KEY}&limit=5"
       response = RestClient.get(url)
     
-      @@cache[q] = JSON.parse(response)
+      QUERY_CACHE[q] = JSON.parse(response)
     end
   end
 end
